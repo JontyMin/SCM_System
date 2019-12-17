@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/vue.min.js"></script>
+    <script src="~/Scripts/vue-resource.min.js"></script>
+    <script>
+		window.addEventListener("load", function() {
+			var app = new Vue({
+				el: '#app',
+				data: {
+					ls: []
+				},
+				created: function() {
+					this.$http.get("http://localhost:50086/api/CheckDepot/getAll").then(c => {
+						console.log(c.data);
+					});
+				}
+			});
+		});
+    </script>
+</head>
+<body>
+    <div id="app"> 
+    </div>
+</body>
+</html>
