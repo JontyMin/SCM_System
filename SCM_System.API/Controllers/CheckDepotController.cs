@@ -13,15 +13,16 @@ namespace SCM_System.API.Controllers
     [RoutePrefix("api/CheckDepot")]
     public class CheckDepotController : ApiController,IDisposable
     {
-        BaseService<CheckDepot> db=new CheckDepotService();
 
+       // readonly BaseService<CheckDepot> db=new CheckDepotService();
+       BaseService<CheckDepot> db = CreateFactory.CreateInstance<CheckDepotService>();
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("getAll")]
-        public async Task<List<CheckDepot>> getAll()
+        [Route("GetAll")]
+        public async Task<List<CheckDepot>> GetAll()
         {
             return await db.GetAllAsync();
         }
