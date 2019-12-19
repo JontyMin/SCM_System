@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_System.API", "SCM_Syste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_System.WEBSite", "SCM_System.WEBSite\SCM_System.WEBSite.csproj", "{ACAC32FD-3F25-4B3B-8FAF-1650C8AA4509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_System.UI", "C:\Users\87917\Desktop\SCM_System\SCM_System.UI\SCM_System.UI.csproj", "{8BF67C92-3AD4-42CC-8AC2-0DED87F48E1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_System.UI", "SCM_System.UI\SCM_System.UI.csproj", "{8BF67C92-3AD4-42CC-8AC2-0DED87F48E1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
