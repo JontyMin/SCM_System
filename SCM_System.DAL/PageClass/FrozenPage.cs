@@ -20,6 +20,16 @@ namespace SCM_System.DAL.PageClass
             };
             return list;
         }
+
+
+
+        public static MyPage<T> uponConditionPage<T>(this List<T> ls) {
+            MyPage<T> mplist = new MyPage<T>() { 
+                ls=ls,
+                total=ls.Count()
+            };
+            return mplist;
+        }
     }
 
     public class MyPage<T>

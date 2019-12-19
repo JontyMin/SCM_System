@@ -94,6 +94,7 @@
     <Compile Include="Controllers\CheckDepotController.cs" />
     <Compile Include="Controllers\CreateFactory.cs" />
     <Compile Include="Controllers\PdskcController.cs" />
+    <Compile Include="Controllers\PublicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -116,6 +116,16 @@ namespace SCM_System.DAL
             return _db.customPage<T>(mainkey, index, size);
         }
 
+
+        /// <summary>
+        /// 根据条件进行分页,把根据条件查询完之后的集合放入此方法，可用自定义控件实现分页
+        /// </summary>
+        /// <typeparam name="T">对模型类的哪个类型需要分页</typeparam>
+        /// <param name="ls">根据条件查询完之后的集合</param>
+        /// <returns></returns>
+        public MyPage<T> uponConditionPage<T>(List<T> ls) {
+            return ls.uponConditionPage<T>();
+        }
         #endregion
 
 
