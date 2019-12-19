@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44354</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -534,6 +534,7 @@
     <Content Include="Views\Pdskc\SplitDetail.cshtml" />
     <Content Include="Views\Pdskc\SplitEdit.cshtml" />
     <Content Include="Views\Pdskc\Stream.cshtml" />
+    <Content Include="Views\Public\CustomerPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
