@@ -4,16 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SCM_System.UI.Views.Pdskc
+namespace SCM_System.UI.Controllers
 {
-    public class indexController : Controller
+    public class BasicController : Controller
     {
-        // GET: index
+        // GET: basic
         public ActionResult Index()
         {
-            return View();
-        }
-        public ActionResult Assemble() {
             return View();
         }
     }

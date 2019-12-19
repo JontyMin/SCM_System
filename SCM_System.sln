@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_System.WEBSite", "SCM_S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_System.UI", "SCM_System.UI\SCM_System.UI.csproj", "{8BF67C92-3AD4-42CC-8AC2-0DED87F48E1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{B03DBD48-4FF4-4181-854B-1895A787EC65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8BF67C92-3AD4-42CC-8AC2-0DED87F48E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF67C92-3AD4-42CC-8AC2-0DED87F48E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF67C92-3AD4-42CC-8AC2-0DED87F48E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03DBD48-4FF4-4181-854B-1895A787EC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03DBD48-4FF4-4181-854B-1895A787EC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03DBD48-4FF4-4181-854B-1895A787EC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03DBD48-4FF4-4181-854B-1895A787EC65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

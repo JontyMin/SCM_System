@@ -131,7 +131,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AssembleController.cs" />
-    <Compile Include="Views\Pdskc\indexController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="basic\customer.html" />
@@ -492,13 +491,46 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Main.cshtml" />
+    <Content Include="Views\Pdskc\Assemble.cshtml" />
+    <Content Include="Views\Pdskc\AssembleAdd.cshtml" />
+    <Content Include="Views\Pdskc\AssembleEdit.cshtml" />
+    <Content Include="Views\Pdskc\CheckDepot.cshtml" />
+    <Content Include="Views\Pdskc\CheckDepotAdd.cshtml" />
+    <Content Include="Views\Pdskc\CheckDepotDetail.cshtml" />
+    <Content Include="Views\Pdskc\CheckDepotEdit.cshtml" />
+    <Content Include="Views\Pdskc\Devolves.cshtml" />
+    <Content Include="Views\Pdskc\DevolvesAdd.cshtml" />
+    <Content Include="Views\Pdskc\DevolvesDetail.cshtml" />
+    <Content Include="Views\Pdskc\DevolvesEdit.cshtml" />
+    <Content Include="Views\Pdskc\Index.cshtml" />
+    <Content Include="Views\Pdskc\Losts.cshtml" />
+    <Content Include="Views\Pdskc\LostsAdd.cshtml" />
+    <Content Include="Views\Pdskc\LostsDetail.cshtml" />
+    <Content Include="Views\Pdskc\LostsEdit.cshtml" />
+    <Content Include="Views\Pdskc\PayOff.cshtml" />
+    <Content Include="Views\Pdskc\PayOffAdd.cshtml" />
+    <Content Include="Views\Pdskc\PayOffDetail.cshtml" />
+    <Content Include="Views\Pdskc\PayOffEdit.cshtml" />
+    <Content Include="Views\Pdskc\Split.cshtml" />
+    <Content Include="Views\Pdskc\SplitAdd.cshtml" />
+    <Content Include="Views\Pdskc\SplitDetail.cshtml" />
+    <Content Include="Views\Pdskc\SplitEdit.cshtml" />
+    <Content Include="Views\Pdskc\Stream.cshtml" />
+    <Content Include="Views\basic\Customer.cshtml" />
+    <Content Include="Views\basic\CustomerAdd.cshtml" />
+    <Content Include="Views\basic\CustomerEdit.cshtml" />
+    <Content Include="Views\basic\Index.cshtml" />
+    <Content Include="Views\basic\Product.cshtml" />
+    <Content Include="Views\basic\ProductAdd.cshtml" />
+    <Content Include="Views\basic\ProductEdit.cshtml" />
+    <Content Include="Views\basic\Store.cshtml" />
+    <Content Include="Views\basic\StoreAdd.cshtml" />
     <Content Include="Views\index\Assemble.cshtml" />
     <Content Include="Views\Public\CustomerPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\basic\" />
     <Folder Include="Views\Buy\" />
     <Folder Include="Views\System\" />
   </ItemGroup>
@@ -534,6 +566,8 @@
           <DevelopmentServerPort>54554</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44354/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>https://localhost:44354/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
