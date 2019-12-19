@@ -1,4 +1,23 @@
-﻿<div id="app">
+﻿
+@section CustomJs{
+    <script>
+        window.addEventListener('load', function () {
+            var app = new Vue({
+                el: "#app",
+                data: {},
+                created: function () {
+                    this.$http.get("http://localhost:50086/api/pdskc/A").then(d => {
+                        console.log(d.data);
+                        alert(1)
+                    })
+                    alert(2)
+                }
+            })
+        })
+    </script>
+}
+<div id="app">
+    @ViewBag.a
     <div class="sub-heard-part">
         <ol class="breadcrumb m-b-0">
             <li><a href="#" onclick='$("#div1").load("/pdskc/Index.html")'>库存管理</a></li>
@@ -96,7 +115,7 @@
                         </td>
                         <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/CheckDepotEdit.html")'>修改</a></td>
                     </tr>
-                    <tr>
+                    @*<tr>
                         <td>
                             DB0001
                         </td>
@@ -143,7 +162,7 @@
                             完成
                         </td>
                         <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a></td>
-                    </tr>
+                    </tr>*@
                 </tbody>
             </table>
             <div align="center">
