@@ -22,5 +22,6 @@ namespace SCM_System.Model
 
         [StringLength(1000)]
         public string DevDDesc { get; set; }
+        //ssss
     }
 }
