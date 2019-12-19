@@ -21,5 +21,12 @@ namespace SCM_System.API.Controllers
         public async Task<List<CheckDepot>> A() {
             return await db.GetAllAsync();
         }
+
+        [HttpGet]
+        [Route("b")]
+        public int b()
+        {
+            return  1;
+        }
     }
 }
