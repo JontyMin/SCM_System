@@ -13,5 +13,9 @@ namespace SCM_System.UI.Controllers
         {
             return View();
         }
+
+        public ActionResult CustomerPage(){
+            return View();
+        }
     }
 }

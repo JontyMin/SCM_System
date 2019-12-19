@@ -493,13 +493,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\index\Assemble.cshtml" />
+    <Content Include="Views\Public\CustomerPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\basic\" />
     <Folder Include="Views\Buy\" />
-    <Folder Include="Views\Public\" />
     <Folder Include="Views\System\" />
   </ItemGroup>
   <ItemGroup>
