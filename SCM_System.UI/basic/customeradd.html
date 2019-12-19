@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddPage</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vue-2.5.2.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <link href="../layui/css/layui.css" rel="stylesheet" />
+    <script src="../layui/layui.js"></script>
+
+</head>
+<body>
+    <div class="sub-heard-part">
+        <ol class="breadcrumb m-b-0">
+            <li><a href="#">基础数据</a></li>
+            <li><a href="#">客户资料</a></li>
+            <li><a href="#">添加</a></li>
+        </ol>
+    </div>
+    
+    <div class="graph">
+        <div class="layui-container">
+            <div class="layui-row">
+                <form class="layui-form layui-col-md-offset-3 layui-col-md-6 layui-col-md-offset-3 layui-form-pane">
+
+
+                    <div class="layui-form-item">
+                        <label for="inputEmail3" class="layui-form-label">商户编号:</label>
+                        <div class="layui-input-block">
+                           
+                            <input type="text" class="layui-input" id="txtBkName" @*v-model="RowData.BkName" *@ value="aaa" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">客户名称:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="客户名称">
+                        </div>
+                    </div>
+
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">客户等级</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value="">请选择</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司名称:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="公司名称">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系人:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="联系人">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">备注:</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="备注">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" v-on:click="EditData()" type="button" id="butAdd">立即提交</button>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+<script type="text/javascript">
+    layui.use(['form'], function () { });
+</script>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditPage</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vue-2.5.2.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+</head>
+<body>
+    <div class="sub-heard-part">
+        <ol class="breadcrumb m-b-0">
+            <li><a href="#">基础数据</a></li>
+            <li><a href="#">商品资料</a></li>
+            <li><a href="#">编辑</a></li>
+        </ol>
+    </div>
+    <div class="graph">
+        <div class="row">
+            <form class="form-horizontal col-md-offset-3 col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">商品编号:</label>
+                    <div class="col-sm-10">
+                        <label>a5155a</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">所属类别:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">颜色:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">拼英简码:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="拼英简码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">生产厂家:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="生产厂家">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">库存下限:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="库存下限">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">销售价格:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="销售价格">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">商品名称:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="商品名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">单位:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">规格:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">条码:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="条码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">预设进价:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="条码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">库存上限:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="库存上限">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">备注:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="条码">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button id="butAdd" type="button" class="btn btn-default" v-on:click="EditData()">编辑</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

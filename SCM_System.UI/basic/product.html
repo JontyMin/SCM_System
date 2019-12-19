@@ -1,0 +1,151 @@
+﻿<div id="app">
+    <div class="sub-heard-part">
+        <ol class="breadcrumb m-b-0">
+            <li><a href="#" onclick='$("#div1").load("/basic/Index.html")'>基础数据</a></li>
+            <li><a href="#">商品资料</a></li>
+
+            <input style="float: right" class="btn btn-default btn-xs" type="submit" value="添加商品资料" v-on:click="ShowPage()">
+
+        </ol>
+    </div>
+
+    <div class="graph">
+
+        <div class="row">
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">商品名称:</div>
+                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="商品名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="btn btn-default btn-lg" type="submit" value="查询">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="tables row">
+            <table class="table table-striped table-bordered table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>商品名称</th>
+                        <th>拼英简码</th>
+                        <th>条形码</th>
+                        <th>单位</th>
+                        <th>规格</th>
+                        <th>颜色</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">
+                            1
+                        </td>
+                        <td>娃哈哈</td>
+                        <td>
+                           ddddfd
+
+                        </td>
+                        <td>151515151515</td>
+                        <td>株洲市</td>
+                        <td>wu</td>
+                        <td>wu</td>
+                        <td><a href="javascript:;">删除</a> | <a href="javascript:;" v-on:click="ShowPage(1)">修改</a></td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            1
+                        </td>
+                        <td>娃哈哈</td>
+                        <td>
+                            ddddfd
+
+                        </td>
+                        <td>151515151515</td>
+                        <td>株洲市</td>
+                        <td>wu</td>
+                        <td>wu</td>
+                        <td><a href="javascript:;">删除</a> | <a href="javascript:;" v-on:click="ShowPage(1)">修改</a></td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            1
+                        </td>
+                        <td>娃哈哈</td>
+                        <td>
+                            ddddfd
+
+                        </td>
+                        <td>151515151515</td>
+                        <td>株洲市</td>
+                        <td>wu</td>
+                        <td>wu</td>
+                        <td><a href="javascript:;">删除</a> | <a href="javascript:;" v-on:click="ShowPage(1)">修改</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <div align="center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var myVue = new Vue({
+        el: "#app",
+        methods: {
+            //跳转到添加/修改页面
+            ShowPage: function (id) {
+                var url = "";
+                var mes = "";
+                if (!id) {
+                   
+                    url = "/basic/productadd.html";
+                    mes = "添加成功!";
+                } else {
+                    url = "/basic/productEdit.html?id=" + id;
+                    mes = "修改成功!";
+                }
+                layer.open({
+                    type: 2,
+                    shade: false,
+                    area: ['500px', '550px'],
+                    maxmin: true,
+                    content: url,
+                    zIndex: layer.zIndex,
+                    end: function () { //子页面关闭时调用
+                        layer.alert(mes);
+                    }
+                });
+            }
+        }
+    });
+</script>
+
