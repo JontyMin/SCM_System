@@ -130,6 +130,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AssembleController.cs" />
+    <Compile Include="Views\Pdskc\indexController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="basic\customer.html" />
@@ -452,6 +454,7 @@
     <Content Include="fonts\weathericons-regular-webfont.eot" />
     <Content Include="fonts\weathericons-regular-webfont.ttf" />
     <Content Include="fonts\weathericons-regular-webfont.woff" />
+    <Content Include="SCMSystem 前台注意事项与编写守则.docx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -489,13 +492,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Main.cshtml" />
+    <Content Include="Views\index\Assemble.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\basic\" />
     <Folder Include="Views\Buy\" />
-    <Folder Include="Views\Pdskc\" />
     <Folder Include="Views\Public\" />
     <Folder Include="Views\System\" />
   </ItemGroup>
