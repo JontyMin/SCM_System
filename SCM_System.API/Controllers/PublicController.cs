@@ -13,7 +13,8 @@ namespace SCM_System.API.Controllers
 {
     [RoutePrefix("api/public")]
     public class PublicController : ApiController
-    {       
+    {
+       
         BaseService<Customers> db = CreateFactory.CreateInstance<CustomersService>();
         /// <summary>
         /// 查询用户表的所有信息
