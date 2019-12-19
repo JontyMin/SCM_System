@@ -2,8 +2,8 @@
     <div class="sub-heard-part">
         <ol class="breadcrumb m-b-0">
             <li><a href="#" onclick='$("#div1").load("/pdskc/Index.html")'>库存管理</a></li>
-            <li><a href="#">商品组装</a></li>
-            <a class="btn green two" href="#" onclick='$("#div1").load("/pdskc/AssembleAdd.html")' style="float: right;font-size:10px">新增商品组装单</a>
+            <li><a href="#">库存调拨</a></li>
+            <a class="btn green two" href="#" onclick='$("#div1").load("/pdskc/DevolvesAdd.html")' style="float: right;font-size:10px">新增调拨单</a>
 
         </ol>
 
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail2">发生仓库:</label>
+                    <label for="exampleInputEmail2">仓库:</label>
                     <select class="form-control">
                         <option>请选择</option>
                     </select>
@@ -44,28 +44,28 @@
                 <thead>
 
                     <tr>
-                        <th width="14%">
-                            组装单号
-                        </th>
                         <th width="15%">
-                            商品名称
-                        </th>
-                        <th width="8%">
-                            发生仓库
-                        </th>
-                        <th width="9%">
-                            组装日期
+                            调拨编号
                         </th>
                         <th width="11%">
+                            调拨仓库
+                        </th>
+                        <th width="8%">
+                            调入仓库
+                        </th>
+                        <th width="9%">
+                            调拨日期
+                        </th>
+                        <th width="16%">
                             经手人
                         </th>
                         <th width="12%">
-                            总金额
+                            备注
                         </th>
-                        <th width="12%">
+                        <th width="14%">
                             状态
                         </th>
-                        <th width="19%">
+                        <th width="15%">
                             操作
                         </th>
                     </tr>
@@ -74,13 +74,13 @@
 
                     <tr>
                         <td>
-                            ZZ0002
-                        </td>
-                        <td>
-                            娃哈哈矿泉水
+                            DB0001
                         </td>
                         <td>
                             郴州
+                        </td>
+                        <td>
+                            长沙
                         </td>
                         <td>
                             2012-12-20
@@ -89,22 +89,22 @@
                             胡杨成
                         </td>
                         <td>
-                            500.00
+                            备注
                         </td>
                         <td>
                             新建
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/AssembleEdit.html")'>修改</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/DevolvesDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/DevolvesEdit.html")'>修改</a></td>
                     </tr>
                     <tr>
                         <td>
-                            ZZ0002
-                        </td>
-                        <td>
-                            娃哈哈矿泉水
+                            DB0001
                         </td>
                         <td>
                             郴州
+                        </td>
+                        <td>
+                            长沙
                         </td>
                         <td>
                             2012-12-20
@@ -113,22 +113,22 @@
                             胡杨成
                         </td>
                         <td>
-                            500.00
+                            备注
                         </td>
                         <td>
                             审核
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/DevolvesDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
                     </tr>
                     <tr>
                         <td>
-                            ZZ0002
-                        </td>
-                        <td>
-                            娃哈哈矿泉水
+                            DB0001
                         </td>
                         <td>
                             郴州
+                        </td>
+                        <td>
+                            长沙
                         </td>
                         <td>
                             2012-12-20
@@ -137,12 +137,12 @@
                             胡杨成
                         </td>
                         <td>
-                            500.00
+                            备注
                         </td>
                         <td>
                             完成
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/DevolvesDetail.html")'>查看</a></td>
                     </tr>
                 </tbody>
             </table>

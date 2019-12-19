@@ -2,8 +2,8 @@
     <div class="sub-heard-part">
         <ol class="breadcrumb m-b-0">
             <li><a href="#" onclick='$("#div1").load("/pdskc/Index.html")'>库存管理</a></li>
-            <li><a href="#">商品组装</a></li>
-            <a class="btn green two" href="#" onclick='$("#div1").load("/pdskc/AssembleAdd.html")' style="float: right;font-size:10px">新增商品组装单</a>
+            <li><a href="#">商品拆分</a></li>
+            <a class="btn green two" href="#" onclick='$("#div1").load("/pdskc/SplitAdd.html")' style="float: right;font-size:10px">新增拆分单</a>
 
         </ol>
 
@@ -14,12 +14,12 @@
             <form class="form-inline">
 
                 <div class="form-group">
-                    <label for="exampleInputName2">编号:</label>
+                    <label for="exampleInputName2">单据编号:</label>
                     <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputEmail2">创建人:</label>
+                    <label for="exampleInputEmail2">经手人:</label>
                     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="请输入">
                 </div>
                 <div class="form-group">
@@ -45,7 +45,7 @@
 
                     <tr>
                         <th width="14%">
-                            组装单号
+                            拆分单号
                         </th>
                         <th width="15%">
                             商品名称
@@ -54,7 +54,7 @@
                             发生仓库
                         </th>
                         <th width="9%">
-                            组装日期
+                            拆分日期
                         </th>
                         <th width="11%">
                             经手人
@@ -72,9 +72,10 @@
                 </thead>
                 <tbody>
 
+                    <!-- -->
                     <tr>
                         <td>
-                            ZZ0002
+                            CR0002
                         </td>
                         <td>
                             娃哈哈矿泉水
@@ -94,11 +95,11 @@
                         <td>
                             新建
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/AssembleEdit.html")'>修改</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/SplitDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/SplitEdit.html")'>修改</a></td>
                     </tr>
                     <tr>
                         <td>
-                            ZZ0002
+                            CR0002
                         </td>
                         <td>
                             娃哈哈矿泉水
@@ -118,11 +119,11 @@
                         <td>
                             审核
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/SplitDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
                     </tr>
                     <tr>
                         <td>
-                            ZZ0002
+                            CR0002
                         </td>
                         <td>
                             娃哈哈矿泉水
@@ -142,7 +143,7 @@
                         <td>
                             完成
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/SplitDetail.html")'>查看</a></td>
                     </tr>
                 </tbody>
             </table>

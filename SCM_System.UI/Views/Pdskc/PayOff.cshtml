@@ -2,8 +2,8 @@
     <div class="sub-heard-part">
         <ol class="breadcrumb m-b-0">
             <li><a href="#" onclick='$("#div1").load("/pdskc/Index.html")'>库存管理</a></li>
-            <li><a href="#">商品组装</a></li>
-            <a class="btn green two" href="#" onclick='$("#div1").load("/pdskc/AssembleAdd.html")' style="float: right;font-size:10px">新增商品组装单</a>
+            <li><a href="#">库存报溢</a></li>
+            <a class="btn green two" href="#" onclick='$("#div1").load("/pdskc/PayOffAdd.html")' style="float: right;font-size:10px">新增报溢单</a>
 
         </ol>
 
@@ -28,12 +28,6 @@
                         <option>请选择</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">发生仓库:</label>
-                    <select class="form-control">
-                        <option>请选择</option>
-                    </select>
-                </div>
 
 
                 <button type="submit" class="btn btn-default">查询</button>
@@ -44,40 +38,36 @@
                 <thead>
 
                     <tr>
-                        <th width="14%">
-                            组装单号
-                        </th>
                         <th width="15%">
-                            商品名称
-                        </th>
-                        <th width="8%">
-                            发生仓库
+                            报溢编号
                         </th>
                         <th width="9%">
-                            组装日期
+                            报溢仓库
                         </th>
                         <th width="11%">
-                            经手人
+                            报溢日期
                         </th>
                         <th width="12%">
-                            总金额
+                            经手人
+                        </th>
+                        <th width="13%">
+                            报溢总金额
+                        </th>
+                        <th width="13%">
+                            备注
                         </th>
                         <th width="12%">
                             状态
                         </th>
-                        <th width="19%">
+                        <th width="15%">
                             操作
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-
                     <tr>
                         <td>
-                            ZZ0002
-                        </td>
-                        <td>
-                            娃哈哈矿泉水
+                            DB0001
                         </td>
                         <td>
                             郴州
@@ -90,18 +80,18 @@
                         </td>
                         <td>
                             500.00
+                        </td>
+                        <td>
+                            备注
                         </td>
                         <td>
                             新建
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/AssembleEdit.html")'>修改</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/PayOffDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/PayOffEdit.html")'>修改</a></td>
                     </tr>
                     <tr>
                         <td>
-                            ZZ0002
-                        </td>
-                        <td>
-                            娃哈哈矿泉水
+                            DB0001
                         </td>
                         <td>
                             郴州
@@ -114,18 +104,18 @@
                         </td>
                         <td>
                             500.00
+                        </td>
+                        <td>
+                            备注
                         </td>
                         <td>
                             审核
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/PayOffDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
                     </tr>
                     <tr>
                         <td>
-                            ZZ0002
-                        </td>
-                        <td>
-                            娃哈哈矿泉水
+                            DB0001
                         </td>
                         <td>
                             郴州
@@ -140,9 +130,12 @@
                             500.00
                         </td>
                         <td>
-                            完成
+                            备注
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a></td>
+                        <td>
+                            新建
+                        </td>
+                        <td><a href="#" onclick='$("#div1").load("/pdskc/PayOffDetail.html")'>查看</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -170,3 +163,6 @@
         </div>
     </div>
 </div>
+<script>
+
+</script>
