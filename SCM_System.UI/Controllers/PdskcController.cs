@@ -31,6 +31,8 @@ namespace SCM_System.UI.Controllers
 
         public ActionResult CheckDepot()
         {
+            int i = 1;
+            ViewBag.a = i;
             return View();
         }
 
