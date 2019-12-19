@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SCM_System.DAL.PageClass;
 
 namespace SCM_System.DAL
 {
@@ -15,6 +16,7 @@ namespace SCM_System.DAL
         /// 配置连接字符串
         /// </summary>
         public readonly db_SCM _db;
+
 
         public BaseService(db_SCM db)
         {
@@ -96,7 +98,24 @@ namespace SCM_System.DAL
             // GC.SuppressFinalize(this);
         }
 
-  
+
+        #endregion
+
+
+        #region Page
+        /// <summary>
+        /// 实现分页
+        /// </summary>
+        /// <typeparam name="T">对模型类的哪个类型需要分页</typeparam>
+        /// <param name="mainkey">主键</param>
+        /// <param name="index">页码</param>
+        /// <param name="size">页大小(默认为3)</param>
+        /// <returns></returns>
+        public MyPage<T> AchieveMyPage<T>(string mainkey,int index = 1, int size = 3) where T:class
+        {
+            return _db.customPage<T>(mainkey, index, size);
+        }
+
         #endregion
 
 

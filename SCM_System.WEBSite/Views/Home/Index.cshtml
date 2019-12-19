@@ -7,28 +7,34 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <script src="~/Scripts/vue.min.js"></script>
-    <script src="~/Scripts/vue-resource.min.js"></script>
-    <script>
-		window.addEventListener("load", function() {
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+	<script src="~/Scripts/jquery-1.9.1.js"></script>
+	<script src="~/Scripts/vue.min.js"></script>
+	<script src="~/Scripts/IView/iview.min.js"></script>
+	<script src="~/Scripts/vue-resource.min.js"></script>
+	<script>
+		$(function () {
+			
 			var app = new Vue({
 				el: '#app',
 				data: {
 					ls: []
 				},
-				created: function() {
+				created: function () {
 					this.$http.get("http://localhost:50086/api/CheckDepot/getAll").then(c => {
 						console.log(c.data);
 					});
-				}
+				},
+
 			});
 		});
-    </script>
+	</script>
 </head>
 <body>
-    <div id="app"> 
-    </div>
+
+<div id="app">
+</div>
+
 </body>
 </html>
