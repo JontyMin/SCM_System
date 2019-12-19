@@ -516,11 +516,19 @@
     <Content Include="Views\Pdskc\SplitDetail.cshtml" />
     <Content Include="Views\Pdskc\SplitEdit.cshtml" />
     <Content Include="Views\Pdskc\Stream.cshtml" />
+    <Content Include="Views\basic\Customer.cshtml" />
+    <Content Include="Views\basic\CustomerAdd.cshtml" />
+    <Content Include="Views\basic\CustomerEdit.cshtml" />
+    <Content Include="Views\basic\Index.cshtml" />
+    <Content Include="Views\basic\Product.cshtml" />
+    <Content Include="Views\basic\ProductAdd.cshtml" />
+    <Content Include="Views\basic\ProductEdit.cshtml" />
+    <Content Include="Views\basic\Store.cshtml" />
+    <Content Include="Views\basic\StoreAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\basic\" />
     <Folder Include="Views\Buy\" />
     <Folder Include="Views\Public\" />
     <Folder Include="Views\System\" />
