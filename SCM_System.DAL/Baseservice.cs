@@ -56,7 +56,11 @@ namespace SCM_System.DAL
         }
 
 
-
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="model">模型类</param>
+        /// <returns>int</returns>
         public async Task<int> RemoveAsync(T model)
         {
             _db.Entry(model).State = EntityState.Deleted;
