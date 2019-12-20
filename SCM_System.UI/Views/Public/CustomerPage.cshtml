@@ -3,11 +3,43 @@
         window.onload = function () {
             var app = new Vue({
                 el: "#div_cts",
-                data: {},
-                created:function () {
-                    this.$http.get("http://localhost:50086/api/public/GetCustomersAll").then(d => {
-                        console.log(d.data);
-                    });
+                data: {
+                    cname: "",
+                    level: 0,
+                    index: 1,
+                    size: 3,
+                    resource: {},
+                    cllist:[]
+                },
+                created: function () {
+                    this.LoadPage();
+                    this.LoadLevel();
+                    
+                },
+                methods: {
+                    LoadPage: function () {
+                        this.$http.get("https://localhost:50086/api/public/GetCustomersUponConditionPage", {
+                            params: {
+                                cname: this.cname == "" ? "输入名称" : this.cname,
+                                level: this.level,
+                                index: this.index,
+                                size: this.size
+                            }
+                        }).then(d => {
+                            this.resource = d.data;
+                        });
+                    },
+                    LoadLevel: function () {
+                        this.$http.get("http://localhost:50086/api/public/GetCustomerLevelAll").then(d => {
+                            this.cllist = d.data;
+                        });
+                    },
+                    go: function () {
+                        this.LoadPage();
+                    },
+                    find: function () {
+                        this.LoadPage();
+                    }
                 }
             })
         }
@@ -21,33 +53,34 @@
     </ol>-->
     <h1>所有客户列表</h1>
 </div>
-<div class="graph">
+<div class="graph" id="div_cts">
 
     <div class="row">
         <form class="form-horizontal col-md-offset-3 col-md-6 col-md-offset-3">
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">客户名称:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="输入名称">
+                    <input type="text" v-model="cname" class="form-control" id="txtBkName" @*v-model="RowData.BkName" *@ placeholder="输入名称">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">客户等级:</label>
                 <div class="col-sm-10">
-                    <select class="form-control">
-                        <option>请选择</option>
+                    <select class="form-control" v-model="level">
+                        <option value="0">请选择</option>
+                        <option :value="o.CLID" v-for="(o,i) in cllist">{{o.CLName}}</option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button id="butAdd" type="button" class="btn btn-default">查询</button>
+                    <button id="butAdd" @@click="find()" type="button" class="btn btn-default">查询</button>
                 </div>
             </div>
         </form>
     </div>
     <hr />
-    <div class="tables row" id="div_cts">
+    <div class="tables row" >
         <table class="table table-striped table-bordered table-hover table-condensed">
             <thead>
                 <tr>
@@ -72,102 +105,58 @@
                     <th>
                         联系人
                     </th>
-
-
                 <tr>
             </thead>
             <tbody>
-                <tr>
+                <tr v-for="(o,i) in resource.ls">
                     <td>
                         <input type="checkbox" />
                     </td>
                     <td>
-                        1
+                       {{o.CusID}}
                     </td>
                     <td>
-                        aa
+                       {{o.CusName}}
                     </td>
                     <td>
-                        aa公司
+                       {{o.CusCompany}}
                     </td>
                     <td>
-                        黄金
+                      {{o.CLName}}
                     </td>
                     <td>
-                        95
+                        {{o.CLAgio}}
                     </td>
                     <td>
-                        刘先生
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" />
-                    </td>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        aa
-                    </td>
-                    <td>
-                        aa公司
-                    </td>
-                    <td>
-                        黄金
-                    </td>
-                    <td>
-                        95
-                    </td>
-                    <td>
-                        刘先生
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" />
-                    </td>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        aa
-                    </td>
-                    <td>
-                        aa公司
-                    </td>
-                    <td>
-                        黄金
-                    </td>
-                    <td>
-                        95
-                    </td>
-                    <td>
-                        刘先生
+                        {{o.CusMan}}
                     </td>
                 </tr>
             </tbody>
         </table>
         <div align="center">
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <my-page @@change="go()"
+                     :total="resource.total"
+                     :size="size"
+                     v-model="index"></my-page>
+            @*<nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>*@
         </div>
     </div>
 </div>

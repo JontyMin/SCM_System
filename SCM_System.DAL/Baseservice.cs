@@ -122,9 +122,10 @@ namespace SCM_System.DAL
         /// </summary>
         /// <typeparam name="T">对模型类的哪个类型需要分页</typeparam>
         /// <param name="ls">根据条件查询完之后的集合</param>
+        /// <param name="total">此集合按条件查询之前的总条数</param>
         /// <returns></returns>
-        public MyPage<T> uponConditionPage<T>(List<T> ls) {
-            return ls.uponConditionPage<T>();
+        public MyPage<T> uponConditionPage<T>(List<T> ls,int total) {
+            return ls.uponConditionPage<T>(total);
         }
         #endregion
 

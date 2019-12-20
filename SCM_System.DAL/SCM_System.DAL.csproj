@@ -51,6 +51,7 @@
     <Compile Include="BaseService.cs" />
     <Compile Include="CheckDepotDetailService.cs" />
     <Compile Include="CheckDepotService.cs" />
+    <Compile Include="CustomerLevelService.cs" />
     <Compile Include="CustomersService.cs" />
     <Compile Include="PageClass\FrozenPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

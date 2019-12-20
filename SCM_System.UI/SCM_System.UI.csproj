@@ -256,6 +256,7 @@
     <Content Include="js\css3clock.js" />
     <Content Include="js\CSSPlugin.min.js" />
     <Content Include="js\custom-js.js" />
+    <Content Include="js\ydy-customPage.js" />
     <Content Include="js\datamaps-all.js" />
     <Content Include="js\dygraph-combined.js" />
     <Content Include="js\fabochart.js" />
