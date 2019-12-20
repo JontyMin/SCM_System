@@ -536,6 +536,13 @@
     <Content Include="Views\Pdskc\SplitEdit.cshtml" />
     <Content Include="Views\Pdskc\Stream.cshtml" />
     <Content Include="Views\Public\CustomerPage.cshtml" />
+    <Content Include="Views\System\Index.cshtml" />
+    <Content Include="Views\System\Role.cshtml" />
+    <Content Include="Views\System\RoleAdd.cshtml" />
+    <Content Include="Views\System\RoleEdit.cshtml" />
+    <Content Include="Views\System\Users.cshtml" />
+    <Content Include="Views\System\UsersAdd.cshtml" />
+    <Content Include="Views\System\UsersEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
