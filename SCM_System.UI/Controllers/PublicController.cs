@@ -35,5 +35,9 @@ namespace SCM_System.UI.Controllers
         public ActionResult Supplier() {
             return View();
         }
+
+        public ActionResult QuotePricepage() {
+            return View();
+        }
     }
 }

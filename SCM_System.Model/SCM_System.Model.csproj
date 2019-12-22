@@ -70,6 +70,7 @@
     <Compile Include="Losts.cs" />
     <Compile Include="Mr_Yao\V_CusAndCusOrderAndClv.cs" />
     <Compile Include="Mr_Yao\V_CustomersAndLevel.cs" />
+    <Compile Include="Mr_Yao\V_QuotePriceAndDetailAndCustomers.cs" />
     <Compile Include="Mr_Yao\V_VProductsAndDepotStock.cs" />
     <Compile Include="OtherInDepot.cs" />
     <Compile Include="OtherInDepotDetail.cs" />

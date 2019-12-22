@@ -27,6 +27,9 @@ namespace SCM_System.API.Controllers
         ProductLendService pls = CreateFactory.CreateInstance<ProductLendService>();
         //创建客户订单表和客户等级表和客户表的视图
         V_CusAndCusOrderAndClvService vcoc = CreateFactory.CreateInstance<V_CusAndCusOrderAndClvService>();
+
+        //创建报价单跟报价详情单和客户表的视图
+        V_QuotePriceAndDetailAndCustomersService vqdc = CreateFactory.CreateInstance<V_QuotePriceAndDetailAndCustomersService>();
         /// <summary>
         /// 根据条件查询用户表和层级表的信息并分页
         /// </summary>
@@ -124,6 +127,22 @@ namespace SCM_System.API.Controllers
             return vcoc.uponConditionPageFor_VCusAndCusOrderAndClv(name, Convert.ToInt32(index), Convert.ToInt32(size));
         }
 
+
+        /// <summary>
+        /// 根据报价单编号和客户名称对V_QuotePriceAndDetailAndCustomers视图进行分页
+        /// </summary>
+        /// <param name="name">客户名称</param>
+        /// <param name="level">报价单编号</param>
+        /// <param name="index">页码</param>
+        /// <param name="size">页大小</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetV_QuotePriceAndDetailAndCustomersUponCondtionAndPage")]
+        public Task<MyPage<V_QuotePriceAndDetailAndCustomers>> GetV_QuotePriceAndDetailAndCustomersUponCondtionAndPage(string name,string level,UInt16 index = 1, UInt16 size = 3)
+        {
+
+            return vqdc.uponConditionPageForV_QuotePriceAndDetailAndCustomers(name,level,Convert.ToInt32(index), Convert.ToInt32(size));
+        }
 
         /// <summary>
         /// 这是预请求
