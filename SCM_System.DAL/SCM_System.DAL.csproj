@@ -59,6 +59,7 @@
     <Compile Include="ProductsService.cs" />
     <Compile Include="ProductTypesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersService.cs" />
     <Compile Include="V_CusAndCusOrderAndClvService.cs" />
     <Compile Include="V_ProductsService.cs" />
     <Compile Include="V_QuotePriceAndDetailAndCustomersService.cs" />
