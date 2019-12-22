@@ -17,5 +17,23 @@ namespace SCM_System.UI.Controllers
         public ActionResult CustomerPage() {
             return View();
         }
+
+
+        public ActionResult ProductsAll() {
+            return View();
+        }
+
+        public ActionResult CustomerOrderPage() {
+            return View();
+        }
+
+        public ActionResult DepostProducts() {
+            return View();
+        }
+
+
+        public ActionResult Supplier() {
+            return View();
+        }
     }
 }

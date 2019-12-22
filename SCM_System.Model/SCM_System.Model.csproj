@@ -68,7 +68,9 @@
     <Compile Include="InOutDepotDetail.cs" />
     <Compile Include="LostDetail.cs" />
     <Compile Include="Losts.cs" />
+    <Compile Include="Mr_Yao\V_CusAndCusOrderAndClv.cs" />
     <Compile Include="Mr_Yao\V_CustomersAndLevel.cs" />
+    <Compile Include="Mr_Yao\V_VProductsAndDepotStock.cs" />
     <Compile Include="OtherInDepot.cs" />
     <Compile Include="OtherInDepotDetail.cs" />
     <Compile Include="OtherOutDepot.cs" />

@@ -44,5 +44,6 @@ namespace SCM_System.DAL
             //});        
             return base.uponConditionPage<V_CustomersAndLevel>(ls,total);
         }
+    
     }
 }

@@ -543,6 +543,10 @@
     <Content Include="Views\System\Users.cshtml" />
     <Content Include="Views\System\UsersAdd.cshtml" />
     <Content Include="Views\System\UsersEdit.cshtml" />
+    <Content Include="Views\Public\ProductsAll.cshtml" />
+    <Content Include="Views\Public\CustomerOrderPage.cshtml" />
+    <Content Include="Views\Public\DepostProducts.cshtml" />
+    <Content Include="Views\Public\Supplier.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
