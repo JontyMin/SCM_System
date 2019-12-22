@@ -4,20 +4,31 @@
         window.addEventListener('load', function () {
             var app = new Vue({
                 el: "#app",
-                data: {},
+                data: {
+                    CheckDepot:[],
+                },
                 created: function () {
-                    this.$http.get("http://localhost:50086/api/pdskc/b").then(d => {
-                        console.log(d.data);
-                        alert(1)
+                    this.$http.get("http://localhost:50086/api/pdskc/A").then(d => {
+                        this.CheckDepot = d.data;
                     })
-                    alert(2)
-                }
+                },
+                methods: {
+                    sele: function (t) {
+                        location.href = "/pdskc/CheckDepotDetail?id=" + t.CDID + ""
+                    },
+                    del: function (t, index) {
+
+                        this.$http.get("http://localhost:50086/api/pdskc/delCheckDepot/" + t.CDID + "")
+                            .then(d => {
+                                this.CheckDepot.splice(index, 1);
+                            })
+                    },
+                },
             })
         })
     </script>
 }
 <div id="app">
-    @ViewBag.a
     <div class="sub-heard-part">
         <ol class="breadcrumb m-b-0">
             <li><a href="#" onclick='$("#div1").load("/pdskc/Index.html")'>库存管理</a></li>
@@ -91,29 +102,30 @@
                 </thead>
                 <tbody>
 
-                    <tr>
+                    <tr v-for="(t,index) in CheckDepot">
                         <td>
-                            DB0001
+                            {{t.CDID}}
                         </td>
                         <td>
-                            郴州
+                            {{t.DepotID}}
                         </td>
                         <td>
-                            2012-12-20
+                            {{t.CDDate}}
                         </td>
                         <td>
-                            胡杨成
+                            {{t.UserID}}
                         </td>
                         <td>
                             500.00
                         </td>
                         <td>
-                            备注
+                            {{t.CDDesc}}
                         </td>
                         <td>
                             新建
                         </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a> | <a href="javascript:;">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/CheckDepotEdit.html")'>修改</a></td>
+                        <td><a href="#" @@click="sele(t)" >查看</a> | <a href="javascript:;">审核</a> | <a href="#" @@click="del(t,index)">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/CheckDepotEdit.html")'>修改</a></td>
+                        @*a href="/pdskc/CheckDepotDetail?id={{t.CDID}}"*@
                     </tr>
                     @*<tr>
                         <td>

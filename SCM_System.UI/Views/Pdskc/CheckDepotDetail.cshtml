@@ -1,4 +1,50 @@
-﻿<div id="app">
+﻿
+@section CustomJs{
+    <script>
+        window.addEventListener('load', function () {
+
+            var ind = getUrlQueryString('id');
+
+            //得到前页面用a标签传过来的参数  alert(ind)
+
+            function getUrlQueryString(names, urls) {
+                urls = urls || window.location.href;
+                urls && urls.indexOf("?") > -1 ? urls = urls
+                    .substring(urls.indexOf("?") + 1) : "";
+                var reg = new RegExp("(^|&)" + names + "=([^&]*)(&|$)", "i");
+                var r = urls ? urls.match(reg) : window.location.search.substr(1)
+                    .match(reg);
+                if (r != null && r[2] != "")
+                    return unescape(r[2]);
+                return null;
+            };
+
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    CheckDepot: [],
+                },
+                created: function () {
+                    this.$http.get("http://localhost:50086/api/pdskc/SeleCheckDepotID/" + ind + "").then(d => {
+                        this.CheckDepot = d.data;
+                        console.log(d.data)
+                    })
+                },
+                methods: {
+
+                    del: function (t, index) {
+
+                        this.$http.get("http://localhost:50086/api/pdskc/delCheckDepot/" + t.CDID + "")
+                            .then(d => {
+                                this.CheckDepot.splice(index, 1);
+                            })
+                    },
+                },
+            })
+        })
+    </script>
+}
+<div id="app">
 
     <div class="sub-heard-part">
         <ol class="breadcrumb m-b-0">
@@ -21,7 +67,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tr>
+                    <tr v-for="(t,index) in CheckDepot">
                         <td width="27%">
                             <div align="right">
                                 <strong>盘点编号：</strong>
@@ -29,7 +75,7 @@
                         </td>
                         <td width="27%">
                             <div align="left">
-                                PD0001
+                                {{t.CDID}}
                             </div>
                         </td>
                         <td width="7%">
