@@ -16,12 +16,7 @@ namespace SCM_System.UI.Controllers
         public ActionResult Main()
         {
 
-            
-            return View();
-        }
-
-        public ActionResult Login()
-        {
+            ///hah 
             return View();
         }
     }
