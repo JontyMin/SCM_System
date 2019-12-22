@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,9 +52,17 @@
     <Compile Include="BaseService.cs" />
     <Compile Include="CheckDepotDetailService.cs" />
     <Compile Include="CheckDepotService.cs" />
+    <Compile Include="CustomerLevelService.cs" />
     <Compile Include="CustomersService.cs" />
     <Compile Include="PageClass\FrozenPage.cs" />
+    <Compile Include="ProductLendService.cs" />
+    <Compile Include="ProductsService.cs" />
+    <Compile Include="ProductTypesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersService.cs" />
+    <Compile Include="V_CusAndCusOrderAndClvService.cs" />
+    <Compile Include="V_ProductsService.cs" />
+    <Compile Include="V_QuotePriceAndDetailAndCustomersService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SCM_System.IDAL\SCM_System.IDAL.csproj">

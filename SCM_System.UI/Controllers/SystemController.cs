@@ -13,5 +13,35 @@ namespace SCM_System.UI.Controllers
         {
             return View();
         }
+
+        public ActionResult Role()
+        {
+            return View();
+        }
+
+        public ActionResult RoleAdd()
+        {
+            return View();
+        }
+
+        public ActionResult RoleEdit()
+        {
+            return View();
+        }
+
+        public ActionResult Users()
+        {
+            return View();
+        }
+
+        public ActionResult UsersAdd()
+        {
+            return View();
+        }
+
+        public ActionResult UsersEdit()
+        {
+            return View();
+        }
     }
 }
