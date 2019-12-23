@@ -56,6 +56,13 @@ namespace SCM_System.DAL
         }
 
 
+        //public async Task<List<T>> GetAllAsyncs()
+        //{
+        //    return await _db.Set<T>().Where().ToListAsync();
+        //}
+
+
+
         /// <summary>
         /// 删除
         /// </summary>

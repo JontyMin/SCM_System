@@ -5,10 +5,10 @@
             var app = new Vue({
                 el: "#app",
                 data: {
-                    CheckDepot:[],
+                    CheckDepot: [],
                 },
                 created: function () {
-                    this.$http.get("http://localhost:50086/api/pdskc/A").then(d => {
+                    this.$http.get("http://localhost:50086/api/pdskc/GetCheckDepotAll").then(d => {
                         this.CheckDepot = d.data;
                     })
                 },
@@ -18,11 +18,25 @@
                     },
                     del: function (t, index) {
 
-                        this.$http.get("http://localhost:50086/api/pdskc/delCheckDepot/" + t.CDID + "")
+                        this.$http.get("http://localhost:50086/api/pdskc/DelCheckDepotAllID/" + t.CDID + "")
                             .then(d => {
                                 this.CheckDepot.splice(index, 1);
                             })
                     },
+                    dateFormat: function (time) {
+                        var date = new Date(time);
+                        var year = date.getFullYear();
+                        /* 在日期格式中，月份是从0开始的，因此要加0
+                         * 使用三元表达式在小于10的前面加0，以达到格式统一  如 09:11:05
+                         * */
+                        var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+                        var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+                        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+                        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+                        // 拼接
+                        return year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
+                    }
                 },
             })
         })
@@ -107,13 +121,13 @@
                             {{t.CDID}}
                         </td>
                         <td>
-                            {{t.DepotID}}
+                            {{t.DepotName}}
                         </td>
                         <td>
-                            {{t.CDDate}}
+                            {{dateFormat(t.CDDate)}}
                         </td>
                         <td>
-                            {{t.UserID}}
+                            {{t.UsersName}}
                         </td>
                         <td>
                             500.00
@@ -122,59 +136,60 @@
                             {{t.CDDesc}}
                         </td>
                         <td>
-                            新建
+                            {{t.CDState==1?"盘点中":t.CDState==2?"盘点核算":"盘点结束"}}
+                            @*1=盘点中，2=盘点核算，3=盘点结束*@
                         </td>
-                        <td><a href="#" @@click="sele(t)" >查看</a> | <a href="javascript:;">审核</a> | <a href="#" @@click="del(t,index)">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/CheckDepotEdit.html")'>修改</a></td>
+                        <td><a href="#" @@click="sele(t)">查看</a> | <a href="javascript:;">审核</a> | <a href="#" @@click="del(t,index)">删除</a> | <a href="#" onclick='    $("#div1").load("/pdskc/CheckDepotEdit.html")'>修改</a></td>
                         @*a href="/pdskc/CheckDepotDetail?id={{t.CDID}}"*@
                     </tr>
                     @*<tr>
-                        <td>
-                            DB0001
-                        </td>
-                        <td>
-                            郴州
-                        </td>
-                        <td>
-                            2012-12-20
-                        </td>
-                        <td>
-                            胡杨成
-                        </td>
-                        <td>
-                            500.00
-                        </td>
-                        <td>
-                            备注
-                        </td>
-                        <td>
-                            审核
-                        </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            DB0001
-                        </td>
-                        <td>
-                            郴州
-                        </td>
-                        <td>
-                            2012-12-20
-                        </td>
-                        <td>
-                            胡杨成
-                        </td>
-                        <td>
-                            500.00
-                        </td>
-                        <td>
-                            备注
-                        </td>
-                        <td>
-                            完成
-                        </td>
-                        <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a></td>
-                    </tr>*@
+                            <td>
+                                DB0001
+                            </td>
+                            <td>
+                                郴州
+                            </td>
+                            <td>
+                                2012-12-20
+                            </td>
+                            <td>
+                                胡杨成
+                            </td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                备注
+                            </td>
+                            <td>
+                                审核
+                            </td>
+                            <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a> | <a href="javascript:;">审核</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                DB0001
+                            </td>
+                            <td>
+                                郴州
+                            </td>
+                            <td>
+                                2012-12-20
+                            </td>
+                            <td>
+                                胡杨成
+                            </td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                备注
+                            </td>
+                            <td>
+                                完成
+                            </td>
+                            <td><a href="#" onclick='$("#div1").load("/pdskc/CheckDepotDetail.html")'>查看</a></td>
+                        </tr>*@
                 </tbody>
             </table>
             <div align="center">

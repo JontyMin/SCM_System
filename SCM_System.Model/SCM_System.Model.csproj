@@ -109,6 +109,7 @@
     <Compile Include="Stocks.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="UsersRole.cs" />
+    <Compile Include="Vw_CDU.cs" />
     <Compile Include="V_InDepot.cs" />
     <Compile Include="V_InOutDepotDetail.cs" />
     <Compile Include="V_OutDepot.cs" />
