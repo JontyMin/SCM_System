@@ -550,6 +550,7 @@
     <Content Include="Views\Public\DepostProducts.cshtml" />
     <Content Include="Views\Public\Supplier.cshtml" />
     <Content Include="Views\Public\QuotePricepage.cshtml" />
+    <Content Include="Views\Public\Stocks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
