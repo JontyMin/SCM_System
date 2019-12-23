@@ -256,6 +256,7 @@
     <Content Include="js\css3clock.js" />
     <Content Include="js\CSSPlugin.min.js" />
     <Content Include="js\custom-js.js" />
+    <Content Include="js\ydy-customPage.js" />
     <Content Include="js\datamaps-all.js" />
     <Content Include="js\dygraph-combined.js" />
     <Content Include="js\fabochart.js" />
@@ -535,26 +536,26 @@
     <Content Include="Views\Pdskc\SplitEdit.cshtml" />
     <Content Include="Views\Pdskc\Stream.cshtml" />
     <Content Include="Views\Public\CustomerPage.cshtml" />
-    <Content Include="Views\Buy\Depot.cshtml" />
-    <Content Include="Views\Buy\DepotAdd.cshtml" />
-    <Content Include="Views\Buy\DepotDetail.cshtml" />
-    <Content Include="Views\Buy\DepotEdit.cshtml" />
-    <Content Include="Views\Buy\Index.cshtml" />
-    <Content Include="Views\Buy\PurchaseReturn.cshtml" />
-    <Content Include="Views\Buy\PurchaseReturnAdd.cshtml" />
-    <Content Include="Views\Buy\PurchaseReturnDetail.cshtml" />
-    <Content Include="Views\Buy\PurchaseReturnEdit.cshtml" />
-    <Content Include="Views\Buy\Reserve.cshtml" />
-    <Content Include="Views\Buy\ReserveDetail.cshtml" />
-    <Content Include="Views\Buy\Stocks.cshtml" />
-    <Content Include="Views\Buy\StocksAdd.cshtml" />
-    <Content Include="Views\Buy\StocksDetail.cshtml" />
-    <Content Include="Views\Buy\StocksEdit.cshtml" />
+    <Content Include="Views\System\Index.cshtml" />
+    <Content Include="Views\System\Role.cshtml" />
+    <Content Include="Views\System\RoleAdd.cshtml" />
+    <Content Include="Views\System\RoleEdit.cshtml" />
+    <Content Include="Views\System\Users.cshtml" />
+    <Content Include="Views\System\UsersAdd.cshtml" />
+    <Content Include="Views\System\UsersEdit.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Public\ProductsAll.cshtml" />
+    <Content Include="Views\Public\CustomerOrderPage.cshtml" />
+    <Content Include="Views\Public\DepostProducts.cshtml" />
+    <Content Include="Views\Public\Supplier.cshtml" />
+    <Content Include="Views\Public\QuotePricepage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Views\Buy\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
