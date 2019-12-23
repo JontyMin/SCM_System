@@ -55,8 +55,6 @@ namespace SCM_System.DAL
             return await _db.Set<T>().ToListAsync();
         }
 
-
-
         public async Task<int> RemoveAsync(T model)
         {
             _db.Entry(model).State = EntityState.Deleted;

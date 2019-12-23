@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BuyController.cs" />
     <Compile Include="Controllers\CheckDepotController.cs" />
     <Compile Include="Controllers\CreateFactory.cs" />
     <Compile Include="Controllers\PdskcController.cs" />

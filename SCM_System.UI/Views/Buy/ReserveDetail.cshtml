@@ -1,0 +1,221 @@
+﻿
+@{
+    ViewBag.Title = "ReserveDetail";
+}
+
+    <div id="app">
+
+        <div class="sub-heard-part">
+            <ol class="breadcrumb m-b-0">
+                <li><a href="#" onclick='$("#div1").load("/buy/Index.html")'>入库管理</a></li>
+                <li><a href="#" onclick='$("#div1").load("/buy/Reserve.html")'>当前库存</a></li>
+                <li><a href="#">库存详细信息</a></li>
+
+
+
+            </ol>
+        </div>
+        <div class="graph">
+            <div class="outter-wp">
+                <div class="mygraph-form row">
+                    <table class="table table-striped table-bordered  table-condensed">
+                        <thead>
+                            <tr class="active">
+                                <th colspan="6">
+                                    <div align="center"><h4 style="margin-top:0px;margin-bottom:0px">商品详细信息</h4></div>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tr>
+                            <td width="20%" scope="col">
+                                <div align="right">商品编号：</div>
+                            </td>
+                            <td width="13%" scope="col">
+                                <div align="left">SP001</div>
+                            </td>
+                            <td width="17%" scope="col">
+                                <div align="right">商品名称：</div>
+                            </td>
+                            <td width="11%" scope="col">
+                                <div align="left">
+                                    安踏T恤
+                                </div>
+                            </td>
+                            <td width="14%" scope="col">
+                                <div align="right">所属类别：</div>
+                            </td>
+                            <td width="25%" scope="col">
+                                <div align="left">
+                                    衣服
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div align="right">拼音简拼：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">TBTX</div>
+                            </td>
+                            <td scope="col">
+                                <div align="right">商品条码：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">
+                                    白色
+                                </div>
+                            </td>
+                            <td scope="col">
+                                <div align="right">商品颜色：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">
+                                    白色
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div align="right">生产厂家：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">安踏制造</div>
+                            </td>
+                            <td scope="col">
+                                <div align="right">库存上限：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">
+                                    100
+                                </div>
+                            </td>
+                            <td scope="col">
+                                <div align="right">库存下限：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">
+                                    50
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div align="right">预设进价：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">50.00</div>
+                            </td>
+                            <td scope="col">
+                                <div align="right">销售价格：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">80.00</div>
+                            </td>
+                            <td scope="col">
+                                <div align="right">备注：</div>
+                            </td>
+                            <td scope="col">
+                                <div align="left">热卖</div>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div style="margin:10px;">
+                    <hr />
+                </div>
+                <div class="mygraph-form row">
+                    <table class="table table-striped table-bordered table-hover table-condensed">
+                        <thead>
+                            <tr class="active">
+                                <th colspan="8" scope="col">
+                                    <div align="center"><h4 style="margin-top:0px;margin-bottom:0px">库存分布</h4></div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th width="11%" scope="col">
+                                    <div align="center">
+                                        编号
+                                    </div>
+                                </th>
+                                <th width="12%" scope="col">
+                                    <div align="center">
+                                        所在仓库
+                                    </div>
+                                </th>
+                                <th width="10%" scope="col">
+                                    <div align="center">
+                                        数量
+                                    </div>
+                                </th>
+                                <th width="9%" scope="col">
+                                    <div align="center">
+                                        小计
+                                    </div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td scope="col">
+                                    <div align="center">
+                                        002
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div align="center">郴州</div>
+                                </td>
+
+
+
+                                <td scope="col">
+                                    <div align="center">20(件)</div>
+                                </td>
+                                <td scope="col">
+                                    <div style="margin-right: 20px">
+                                        1000.00
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                        <tr>
+
+                            <td colspan="8">
+                                <div align="right">
+                                    <form class="form-inline">
+                                        <div class="form-group">
+
+
+
+                                            <div class="input-group">
+                                                <div class="input-group-addon">合计￥</div>
+                                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" readonly="readonly" style="background-color:#ffffff">
+                                                <div class="input-group-addon">元</div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
