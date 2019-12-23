@@ -64,6 +64,7 @@
     <Compile Include="V_CusAndCusOrderAndClvService.cs" />
     <Compile Include="V_ProductsService.cs" />
     <Compile Include="V_QuotePriceAndDetailAndCustomersService.cs" />
+    <Compile Include="V_StockAndDetailAndProLendAndUsersService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SCM_System.IDAL\SCM_System.IDAL.csproj">

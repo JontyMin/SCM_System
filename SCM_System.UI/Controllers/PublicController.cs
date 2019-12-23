@@ -39,5 +39,9 @@ namespace SCM_System.UI.Controllers
         public ActionResult QuotePricepage() {
             return View();
         }
+
+        public ActionResult Stocks() {
+            return View();
+        }
     }
 }
